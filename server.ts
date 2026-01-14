@@ -9,6 +9,7 @@ import { DatabasePostgres } from "./database/databasePostgres.js";
 
 const app = fastify();
 const databasePostgres = new DatabasePostgres()
+const PORT: number = Number(process.env.PORT) || 3000
 
 const createVideoUseCase = new CreateVideoUseCase(databasePostgres);
 const listVideosUseCase = new ListVideosUseCase(databasePostgres);
@@ -30,6 +31,6 @@ app.get("/videos/:search", (req, res) => videoController.searchVideos(req, res))
 app.put("/videos/:id", (req, res) => videoController.updateVideo(req, res));
 app.delete("/videos/:id", (req, res) => videoController.deleteVideo(req, res));
 
-app.listen({ port: 3000 }).then(() => {
-  console.log("Server running on http://localhost:3000");
+app.listen({ port: PORT }).then(() => {
+  console.log(`Server running on ${PORT}`);
 });
