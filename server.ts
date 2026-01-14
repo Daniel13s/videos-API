@@ -31,6 +31,6 @@ app.get("/videos/:search", (req, res) => videoController.searchVideos(req, res))
 app.put("/videos/:id", (req, res) => videoController.updateVideo(req, res));
 app.delete("/videos/:id", (req, res) => videoController.deleteVideo(req, res));
 
-app.listen({ port: PORT }).then(() => {
+app.listen({ port: PORT, host: "0.0.0.0" }).then(() => {
   console.log(`Server running on ${PORT}`);
 });
