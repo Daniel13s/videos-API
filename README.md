@@ -1,24 +1,25 @@
-🎬 Video API
+# 🎬 Video API
 
-API REST para gerenciamento de vídeos, desenvolvida com Node.js, TypeScript, Fastify e PostgreSQL, seguindo boas práticas de arquitetura e pronta para deploy em ambiente cloud.
+API REST para gerenciamento de vídeos, desenvolvida com **Node.js**, **TypeScript**, **Fastify** e **PostgreSQL**, seguindo boas práticas de arquitetura e pronta para deploy em ambiente cloud.
 
-🚀 Tecnologias Utilizadas
+---
 
-Node.js
+## 🚀 Tecnologias Utilizadas
 
-TypeScript
+- Node.js
+- TypeScript
+- Fastify
+- PostgreSQL (Neon Database)
+- dotenv
+- UUID
+- Arquitetura em camadas  
+  *(Use Cases / Controllers / Database)*
 
-Fastify
+---
 
-PostgreSQL (Neon Database)
+## 📁 Estrutura do Projeto
 
-dotenv
-
-UUID
-
-Arquitetura em camadas (Use Cases / Controllers / Database)
-
-📁 Estrutura do Projeto
+```txt
 src/
 ├── controller/
 │   └── VideoController.ts
@@ -30,10 +31,7 @@ src/
 │   └── postgres.ts
 ├── server.ts
 └── routes.ts
-
-
 Após o build:
-
 dist/
 ├── controller/
 ├── use-case/
@@ -78,6 +76,8 @@ npm start
 
 POST /videos
 
+Body
+
 {
   "title": "Meu primeiro vídeo"
 }
@@ -112,11 +112,11 @@ Database: acesso ao banco de dados
 
 Server: configuração do servidor e rotas
 
-Isso facilita:
+Benefícios:
 
-Testes
+Testes mais simples
 
-Manutenção
+Manutenção facilitada
 
 Escalabilidade
 
@@ -131,7 +131,6 @@ Uso de process.env.PORT
 Servidor escutando em 0.0.0.0
 
 Exemplo:
-
 app.listen({
   port: Number(process.env.PORT),
   host: "0.0.0.0"
