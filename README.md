@@ -1,6 +1,6 @@
 # 🎬 Video API
 
-API REST para gerenciamento de vídeos, desenvolvida com **Node.js**, **TypeScript**, **Fastify** e **PostgreSQL**, seguindo boas práticas de arquitetura e pronta para deploy em ambiente cloud.
+API REST para gerenciamento de vídeos, desenvolvida com Node.js, TypeScript, Fastify e PostgreSQL, seguindo boas práticas de arquitetura e pronta para deploy em ambiente cloud.
 
 ---
 
@@ -12,14 +12,12 @@ API REST para gerenciamento de vídeos, desenvolvida com **Node.js**, **TypeScri
 - PostgreSQL (Neon Database)
 - dotenv
 - UUID
-- Arquitetura em camadas  
-  *(Use Cases / Controllers / Database)*
+- Arquitetura em camadas (Use Cases / Controllers / Database)
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-```txt
 src/
 ├── controller/
 │   └── VideoController.ts
@@ -31,124 +29,131 @@ src/
 │   └── postgres.ts
 ├── server.ts
 └── routes.ts
+
 Após o build:
+
 dist/
 ├── controller/
 ├── use-case/
 ├── database/
 └── server.js
 
-⚙️ Configuração do Ambiente
+---
+
+## ⚙️ Configuração do Ambiente
+
 1️⃣ Clone o repositório
-git clone https://github.com/seu-usuario/video-api.git
-cd video-api
+
+    git clone https://github.com/seu-usuario/video-api.git
+    cd video-api
 
 2️⃣ Instale as dependências
-npm install
+
+    npm install
 
 3️⃣ Configure as variáveis de ambiente
 
 Crie um arquivo .env na raiz do projeto:
 
-DATABASE_URL=postgresql://user:password@host/dbname
-PORT=3000
+    DATABASE_URL=postgresql://user:password@host/dbname
+    PORT=3000
 
-🛠️ Scripts Disponíveis
-# Desenvolvimento
-npm run dev
+---
 
-# Build do projeto
-npm run build
+## 🛠️ Scripts Disponíveis
 
-# Executar em produção
-npm start
+    npm run dev
+    npm run build
+    npm start
 
-▶️ Executando o Projeto
-Ambiente de desenvolvimento
-npm run dev
+---
 
-Produção (após build)
-npm run build
-npm start
+## ▶️ Executando o Projeto
 
-📌 Endpoints da API
-➕ Criar vídeo
+Ambiente de desenvolvimento:
 
+    npm run dev
+
+Produção (após build):
+
+    npm run build
+    npm start
+
+---
+
+## 📌 Endpoints da API
+
+Criar vídeo  
 POST /videos
 
-Body
+Body:
 
-{
-  "title": "Meu primeiro vídeo"
-}
+    {
+      "title": "Meu primeiro vídeo"
+    }
 
+Resposta:
 
-Resposta
+    201 Created
 
-201 Created
-
-📄 Listar vídeos
-
+Listar vídeos  
 GET /videos
 
-Resposta
+Resposta:
 
-[
-  {
-    "id": "uuid",
-    "title": "Meu primeiro vídeo"
-  }
-]
+    [
+      {
+        "id": "uuid",
+        "title": "Meu primeiro vídeo"
+      }
+    ]
 
-🧠 Arquitetura
+---
+
+## 🧠 Arquitetura
 
 A aplicação segue o princípio de separação de responsabilidades:
 
-Controller: recebe a requisição HTTP
-
-Use Case: contém a regra de negócio
-
-Database: acesso ao banco de dados
-
-Server: configuração do servidor e rotas
+- Controller: recebe a requisição HTTP
+- Use Case: contém a regra de negócio
+- Database: acesso ao banco de dados
+- Server: configuração do servidor e rotas
 
 Benefícios:
+- Testes mais simples
+- Manutenção facilitada
+- Escalabilidade
 
-Testes mais simples
+---
 
-Manutenção facilitada
-
-Escalabilidade
-
-☁️ Deploy
+## ☁️ Deploy
 
 A API está preparada para deploy em plataformas como Render.
 
 Requisitos:
-
-Uso de process.env.PORT
-
-Servidor escutando em 0.0.0.0
+- Uso de process.env.PORT
+- Servidor escutando em 0.0.0.0
 
 Exemplo:
-app.listen({
-  port: Number(process.env.PORT),
-  host: "0.0.0.0"
-});
 
-📌 Próximas melhorias
+    app.listen({
+      port: Number(process.env.PORT),
+      host: "0.0.0.0"
+    });
 
- Validação de dados
+---
 
- Testes automatizados
+## 📌 Próximas melhorias
 
- Autenticação
+- Validação de dados
+- Testes automatizados
+- Autenticação
+- Paginação
+- Documentação com Swagger
 
- Paginação
+---
 
- Documentação com Swagger
+## 👨‍💻 Autor
 
-👨‍💻 Autor
-
-Desenvolvido por Daniel
-📫 Entre em contato pelo LinkedIn ou GitHub
+Desenvolvido por Daniel  
+Entre em contato pelo LinkedIn ou GitHub
