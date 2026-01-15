@@ -1,10 +1,10 @@
-# 🎬 Video API
+# Video API
 
 API REST para gerenciamento de vídeos, desenvolvida com Node.js, TypeScript, Fastify e PostgreSQL, seguindo boas práticas de arquitetura e pronta para deploy em ambiente cloud.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Node.js
 - TypeScript
@@ -16,7 +16,7 @@ API REST para gerenciamento de vídeos, desenvolvida com Node.js, TypeScript, Fa
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 src/
 ├── controller/
@@ -40,18 +40,18 @@ dist/
 
 ---
 
-## ⚙️ Configuração do Ambiente
+## Configuração do Ambiente
 
-1️⃣ Clone o repositório
+1) Clone o repositório
 
     git clone https://github.com/seu-usuario/video-api.git
     cd video-api
 
-2️⃣ Instale as dependências
+2) Instale as dependências
 
     npm install
 
-3️⃣ Configure as variáveis de ambiente
+3) Configure as variáveis de ambiente
 
 Crie um arquivo .env na raiz do projeto:
 
@@ -60,7 +60,7 @@ Crie um arquivo .env na raiz do projeto:
 
 ---
 
-## 🛠️ Scripts Disponíveis
+## Scripts Disponíveis
 
     npm run dev
     npm run build
@@ -68,7 +68,7 @@ Crie um arquivo .env na raiz do projeto:
 
 ---
 
-## ▶️ Executando o Projeto
+## Executando o Projeto
 
 Ambiente de desenvolvimento:
 
@@ -81,7 +81,7 @@ Produção (após build):
 
 ---
 
-## 📌 Endpoints da API
+## Endpoints da API
 
 Criar vídeo  
 POST /videos
@@ -110,7 +110,7 @@ Resposta:
 
 ---
 
-## 🧠 Arquitetura
+## Arquitetura
 
 A aplicação segue o princípio de separação de responsabilidades:
 
@@ -126,7 +126,7 @@ Benefícios:
 
 ---
 
-## ☁️ Deploy
+## Deploy
 
 A API está preparada para deploy em plataformas como Render.
 
@@ -143,7 +143,7 @@ Exemplo:
 
 ---
 
-## 📌 Próximas melhorias
+## Próximas melhorias
 
 - Validação de dados
 - Testes automatizados
@@ -153,7 +153,7 @@ Exemplo:
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 Desenvolvido por Daniel  
 Entre em contato pelo LinkedIn ou GitHub
